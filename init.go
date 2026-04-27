@@ -35,7 +35,7 @@ func Init(window *C.GLFWwindow) {
 	Context = C.igCreateContext(nil)
 	IO = C.igGetIO_Nil()
 
-	glslVer := C.CString("#version 410 core")
+	glslVer := C.CString("#version 330 core")
 	C.ImGui_ImplGlfw_InitForOpenGL(window, C.bool(true))
 	C.ImGui_ImplOpenGL3_Init(glslVer)
 	C.free(unsafe.Pointer(glslVer))
